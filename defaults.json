@@ -1,0 +1,10 @@
+{
+    "host": "localhost",
+    "port": 8000,
+    "separator": "\r?\n---\r?\n",
+    "verticalSeparator": "\r?\n--\r?\n",
+    "assetsDir": "public",
+    "css": ["css/metadata.css"],
+    "template": "index.html",
+    "title": "Presentation Builder"
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>{{{title}}}</title>
+  <link rel="stylesheet" href="/dist/reset.css" />
+  <link rel="stylesheet" href="/dist/reveal.css" />
+  <link rel="stylesheet" href="{{{themeUrl}}}" id="theme" />
+
+  {{#cssPaths}}
+  <link rel="stylesheet" href="{{{.}}}" />
+  {{/cssPaths}}
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">{{{slides}}}</div>
+</div>
+
+<script src="/dist/reveal.js"></script>
+
+<script src="/plugin/markdown/markdown.js"></script>
+<script src="/plugin/highlight/highlight.js"></script>
+<script src="/plugin/zoom/zoom.js"></script>
+<script src="/plugin/notes/notes.js"></script>
+<script src="/plugin/math/math.js"></script>
+<script>
+  function extend() {
+    const target = {};
+    for (let i = 0; i < arguments.length; i++) {
+      const source = arguments[i];
+      for (const key in source) {
+        if (source.hasOwnProperty(key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  }
+
+  // default options to init reveal.js
+  const defaultOptions = {
+    controls: false,
+    progress: false,
+    history: true,
+    center: true,
+    transition: "none",
+    slideNumber: false,
+    plugins: [
+      RevealMarkdown,
+      RevealHighlight,
+      RevealZoom,
+      RevealNotes,
+      RevealMath
+    ]
+  }
+
+  // options from URL query string
+  const queryOptions = Reveal().getQueryHash() || {}
+
+  const options = extend(defaultOptions, {{{revealOptionsStr}}}, queryOptions);
+</script>
+
+{{#scriptPaths}}
+<script src="{{{.}}}"></script>
+{{/scriptPaths}}
+
+<script>
+  Reveal.initialize(options);
+</script>
+</body>
+</html>

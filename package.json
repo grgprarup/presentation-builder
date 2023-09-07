@@ -1,58 +1,59 @@
 {
-  "name": "presentation-builder",
-  "description": "Presentations builder for markdown with metadata, using reveal.js",
-  "keywords": [
-    "markdown",
-    "metadata",
-    "revealjs",
-    "presentations"
-  ],
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/grgprarup/presentation-builder.git"
-  },
-  "bugs": "https://github.com/grgprarup/presentation-builder/issues",
-  "license": "MIT",
-  "author": {
-    "name": "Prarup Gurung",
-    "email": "grgprarup@gmail.com",
-    "github": "https://github.com/grgprarup"
-  },
-  "type": "module",
-  "bin": {
-    "presentation-builder": "bin/main.js"
-  },
-  "files": [
-    "bin",
-    "lib"
-  ],
-  "scripts": {
-    "start": "node bin/main.js",
-    "lint": "eslint . --ext .js",
-    "lint:fix": "eslint . --ext .js --fix",
-    "format": "prettier --write ."
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "fs-extra": "^11.1.1",
-    "glob": "^10.3.4",
-    "lodash": "^4.17.21",
-    "mustache": "^4.2.0",
-    "open": "^9.1.0",
-    "reveal.js": "^4.5.0",
-    "try-require": "^1.2.1",
-    "yaml-front-matter": "^4.1.1",
-    "yargs-parser": "^21.1.1"
-  },
-  "devDependencies": {
-    "eslint": "^8.48.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.3"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+    "name": "presentation-builder",
+    "description": "Presentations builder for markdown with metadata, using reveal.js",
+    "keywords": [
+        "markdown",
+        "metadata",
+        "revealjs",
+        "presentations"
+    ],
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/grgprarup/presentation-builder.git"
+    },
+    "bugs": "https://github.com/grgprarup/presentation-builder/issues",
+    "license": "MIT",
+    "author": {
+        "name": "Prarup Gurung",
+        "email": "grgprarup@gmail.com",
+        "github": "https://github.com/grgprarup"
+    },
+    "type": "module",
+    "bin": {
+        "presentation-builder": "bin/main.js"
+    },
+    "files": [
+        "bin",
+        "src"
+    ],
+    "scripts": {
+        "start": "node bin/main.js",
+        "lint": "eslint . --ext .js",
+        "lint:fix": "eslint . --ext .js --fix",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "fs-extra": "^11.1.1",
+        "glob": "^10.3.4",
+        "lodash": "^4.17.21",
+        "mustache": "^4.2.0",
+        "open": "^9.1.0",
+        "resolve": "^1.22.4",
+        "reveal.js": "^4.5.0",
+        "try-require": "^1.2.1",
+        "yaml-front-matter": "^4.1.1",
+        "yargs-parser": "^21.1.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.48.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-import": "^2.28.1",
+        "eslint-plugin-prettier": "^5.0.0",
+        "prettier": "^3.0.3"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
 }

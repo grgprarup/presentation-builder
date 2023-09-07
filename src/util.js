@@ -1,21 +1,18 @@
 import _ from 'lodash'
-import path from 'path'
+import * as path from 'path'
 import fs from 'fs'
 import { promisify } from 'util'
 import yamlFrontMatter from 'yaml-front-matter'
 import markdownPlugin from 'reveal.js/plugin/markdown/markdown.js'
 
-const stat = promisify(fs.stat)
-
 const isDirectory = _.memoize(async (dir) => {
-    const stats = await stat(path.resolve(dir))
-    return stats.isDirectory()
+    return (await promisify(fs.stat)(path.resolve(dir))).isDirectory()
 })
 
 const parseYamlFrontMatter = (content) => {
     const document = yamlFrontMatter.loadFront(content.replace(/^\uFEFF/, ''))
     return {
-        yamlOptions: _.omit(document, '__content'),
+        metadataOptions: _.omit(document, '__content'),
         markdown: document.__content || content,
     }
 }

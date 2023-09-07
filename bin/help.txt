@@ -1,0 +1,6 @@
+Usage: cli <slides.md> [options]
+
+Options:
+  -s, --separator <separator>                 Slide separator [default: 3 dashes (---) surrounded by two blank lines]
+  -S, --vertical-separator <separator>        Vertical slide separator [default: 2 dashes (--) surrounded by two blank lines]
+  -h, --help                                  output usage information

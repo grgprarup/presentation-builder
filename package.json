@@ -21,6 +21,19 @@
   },
   "scripts": {
   },
+  "dependencies": {
+    "express": "^4.18.2",
+    "glob": "^10.3.4",
+    "lodash": "^4.17.21",
+    "mustache": "^4.2.0",
+    "reveal.js": "^4.5.0",
+    "yaml-front-matter": "^4.1.1",
+    "yargs-parser": "^21.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3"
+  },
   "engines": {
     "node": ">=18.0.0"
   }

@@ -1,0 +1,27 @@
+{
+  "name": "presentation-builder",
+  "description": "Presentations builder for markdown with metadata, using reveal.js",
+  "keywords": [
+    "markdown",
+    "metadata",
+    "revealjs",
+    "presentations"
+  ],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grgprarup/presentation-builder.git"
+  },
+  "bugs": "https://github.com/grgprarup/presentation-builder/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Prarup Gurung",
+    "email": "grgprarup@gmail.com",
+    "github": "https://github.com/grgprarup"
+  },
+  "scripts": {
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

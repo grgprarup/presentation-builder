@@ -1,0 +1,107 @@
+/* metadata.scss */
+/*********************************************
+ * DEFAULT
+ *********************************************/
+.slides {
+    background-color: #ffffff;
+    color: #00b1e6;
+    font-size: 32px;
+}
+
+.slides section p,
+li {
+    margin: 20px 20px 20px 20px;
+    text-align: justify;
+}
+
+.slides img {
+    margin: 10px;
+}
+
+h1:not(.title-slide) {
+    margin: 20px 20px 20px 20px;
+    color: #00b1e6;
+    text-align: left;
+}
+
+/*********************************************
+ * TITLE SLIDE
+ *********************************************/
+.title-slide {
+    height: 100%;
+    width: 100%;
+    background-color: #00b1e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-slide h1 {
+    order: 1;
+    margin: 10%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 3.5em;
+}
+
+.title-slide h2,
+.title-slide h3,
+.title-slide h4,
+.title-slide h5 {
+    order: 2;
+    margin: 15% 20px 0 0;
+    text-align: right;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.title-slide hr {
+    order: 2;
+    width: 100%;
+    border: none;
+    border-top: 1px solid white;
+}
+
+.title-slide img {
+    order: 4;
+}
+
+/*********************************************
+ * TITLE CONTENT SLIDE
+ *********************************************/
+.title-content-slide h1 {
+    font-size: 3em;
+}
+
+.title-content-slide p,
+li {
+    font-size: 1.5em;
+}
+
+/*********************************************
+ * TITLE TWO IMAGE SLIDE
+ *********************************************/
+.title-two-image-slide h1 {
+    font-size: 3em;
+}
+
+.title-two-image-slide p,
+li {
+    font-size: 1.5em;
+}
+
+/*********************************************
+ * IMAGE SLIDE
+ *********************************************/
+/*********************************************
+ * TWO IMAGE SLIDE
+ *********************************************/
+/*********************************************
+ * END SLIDE
+ *********************************************/
+.end-slide h1 {
+    font-size: 3em;
+}
+
+/*********************************************
+ * MULTIPLE IMAGE SLIDE
+ *********************************************/

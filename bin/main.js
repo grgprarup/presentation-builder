@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import startServer from '../lib/server'
+import { startServer } from '../lib/server.js'
 import open from 'open'
 import argsParser from 'yargs-parser'
 import fs from 'fs-extra'
@@ -11,10 +11,12 @@ import * as path from 'path'
 const alias = {
     h: 'help',
     s: 'separator',
-    S: 'vertical-separator'
+    S: 'vertical-separator',
 }
 const argv = argsParser(process.argv.slice(2), { alias })
-console.log(argv)
+
+const { disableAutoOpen } = argv
+
 const hasPath = Boolean(argv._[0])
 
 ;(async () => {
@@ -24,9 +26,9 @@ const hasPath = Boolean(argv._[0])
         try {
             ;[server, initialUrl] = await startServer()
             console.log(`The slides are at ${initialUrl}`)
-            !disableAutoOpen && await open(initialUrl, {url: true})
+            !disableAutoOpen && (await open(initialUrl, { url: true }))
             process.on('SIGINT', () => {
-                console.log('Received SIGINT, closing gracefully.')
+                console.log('Shutting down the server.')
                 server.close()
                 process.exit(128)
             })

@@ -16,7 +16,8 @@
         "prefer-const": "error",
         "no-console": "off",
         "no-debugger": "warn",
-        "no-undef": "warn",
+        "no-undef": "error",
+        "no-unused-vars": "warn",
         "quotes": ["error", "single"],
         "semi": ["error", "never"]
     }
